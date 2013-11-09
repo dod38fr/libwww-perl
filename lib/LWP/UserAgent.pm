@@ -166,7 +166,7 @@ sub send_request
 
         # Locate protocol to use
         my $proxy = $request->{proxy};
-        if ($proxy) {
+        if ($proxy && $scheme ne 'https') {
             $scheme = $proxy->scheme;
         }
 
